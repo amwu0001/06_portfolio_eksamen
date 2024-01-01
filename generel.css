@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main,
+footer {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+@font-face {
+  font-family: minFont;
+  src: url("Work_Sans/WorkSans-VariableFont_wght.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/************** menu **************/
+header a {
+  font-family: minFont;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.logo img {
+  max-width: 60px;
+  display: flex;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.menu_ikoner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+/************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
+
+/* Design og positionering */
+.burger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 40px;
+  height: 1px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Roter første linje */
+.change .line1 {
+  transform: translate(0, 4px) rotate(-25deg);
+}
+
+/* Fjern anden linje */
+.change .line2 {
+  opacity: 0;
+}
+
+/* Roter tredje linje */
+.change .line3 {
+  transform: translate(0, -10px) rotate(25deg);
+}
+
+/************** toggle light/dark (har taget udgangspunkt i eksempel fra w3schools.com) **************/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
