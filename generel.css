@@ -1,22 +1,8 @@
+/************** reset **************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-/*main,
-footer {
-  max-width: 1200px;
-  margin: 0px auto;
-}*/
-@font-face {
-  font-family: minFont;
-  src: url("Work_Sans/WorkSans-VariableFont_wght.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  background-color: #1e1e1e;
-  overflow-x: hidden;
 }
 img,
 video {
@@ -24,9 +10,47 @@ video {
   height: auto;
   display: block;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+main {
+  margin-top: 100px;
+}
+/************** Fonte og tekster **************/
+@font-face {
+  font-family: minFont;
+  src: url("Work_Sans/WorkSans-VariableFont_wght.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #f0f0ee;
+  rotate: 270deg;
+}
+/************** generel opsætning **************/
+body {
+  background-color: #1e1e1e;
+  overflow-x: hidden;
+}
+
 /************** menu **************/
 header {
+  background-color: #1e1e1e;
   border-bottom: 0.5px solid rgba(240, 240, 238, 0.5);
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  z-index: 2;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 .logo img {
   display: flex;
@@ -39,7 +63,6 @@ header a {
   font-family: minFont;
   text-decoration: none;
   color: black;
-  text-transform: uppercase;
   font-size: 0.8rem;
   color: #f0f0ee;
 }
@@ -55,6 +78,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  position: relative;
 }
 header nav ul {
   display: flex;
@@ -68,6 +92,58 @@ header nav ul {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+header nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.navbar a:hover {
+  color: #f0f0ee80;
+}
+
+/************* dropdown menu (har taget udgangspunkt i eksempel fra w3schools.com)**********/
+.navbar {
+  overflow: hidden;
+}
+/* Skjul dropdown */
+.dropdown-content {
+  display: none;
+}
+/* Vis dropdown menu på hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  z-index: 1;
+  left: 50%; /*centrer */
+  transform: translateX(-50%); /*centrer */
+  border-bottom: 0.5px solid rgba(240, 240, 238, 0.5);
+  background-color: #1e1e1e;
+}
+/* styling af links i dropdown */
+.dropdown:hover .dropdown-content a {
+  color: #f0f0ee;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+/* skift farve på links ved hover */
+.dropdown:hover .dropdown-content a:hover {
+  color: #f0f0ee80;
+}
+/*placér logo foran dropdown menu*/
+.logo {
+  position: relative;
+  z-index: 3;
 }
 
 /************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
@@ -102,7 +178,9 @@ header nav ul {
 .change .line3 {
   transform: translate(0, -10px) rotate(25deg);
 }
-
+.burger {
+  display: none;
+}
 /************** toggle light/dark (har taget udgangspunkt i eksempel fra w3schools.com) **************/
 
 .switch {
@@ -170,7 +248,7 @@ input:checked + .slider:before {
   padding: 10px 60px;
   border: 0.5px solid rgba(240, 240, 238, 0.5);
   border-radius: 60px;
-  background-color: #1e1e1e;
+  background-color: #191919;
   color: #f0f0ee;
   text-decoration: none;
   font-family: minFont;
@@ -180,11 +258,14 @@ input:checked + .slider:before {
 .knap_forside:hover {
   box-shadow: 0 0px black;
   transform: translateY(1px);
+  background-color: #1e1e1e;
+  color: #f0f0ee80;
+  border: 0.5px solid rgba(240, 240, 238, 0.5);
 }
 .portfolio_knap {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 /************** Footer **************/
 footer {
@@ -229,7 +310,7 @@ footer {
   margin: 40px auto;
 }
 
-/************** Horizontal linje **************/
+/************** Horizontal og vertikal linje **************/
 
 .linje {
   border: 0.5px solid rgba(240, 240, 238, 0.5);
@@ -237,6 +318,17 @@ footer {
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.vertikal_linje {
+  border: 0.5px solid rgba(240, 240, 238, 0.5);
+  border-bottom: none;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  rotate: 90deg;
+  position: relative;
+  left: -45%;
 }
 
 /************** Forside svævende billeder **************/
@@ -434,7 +526,7 @@ footer {
   animation-duration: 18s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .flyv_b3 {
   animation-name: flyv3_kf;
@@ -487,14 +579,14 @@ footer {
 }
 .flyv_b10 {
   animation-name: flyv2_kf;
-  animation-duration: 32s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-delay: 24s;
 }
 .flyv_b11 {
   animation-name: flyv2_kf;
-  animation-duration: 30s;
+  animation-duration: 33s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-delay: 40s;
@@ -516,4 +608,19 @@ footer {
 }
 .delay {
   animation-delay: 31s;
+}
+/************** Delay **************/
+.fade_in {
+  animation-name: kf_fade_in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes kf_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }

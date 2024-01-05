@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <title>Portfolio</title>
     <link rel="stylesheet" href="generel.css">
 </head>
@@ -12,14 +13,20 @@
     <header>
         <nav>
             <div>
-                <a href="index.html" class="logo"><img src="imgs/logo_menu.svg" alt="logo"></a>
+                <a href="index.html" class="logo"><img src="imgs/logo_test.svg" alt="logo"></a>
             </div>
-            <div>
-                <ul>
-                    <li><a href="index.html">HJEM</a></li>
-                    <li><a href="portfolio.html" class="current_page">PORTFOLIO</a></li>
-                    <li><a href="about.html">OM MIG</a></li>
-                </ul>
+            <div class="navbar">
+                <a href="index.html">HJEM</a>
+                <div class="dropdown">
+                    <a href="portfolio.html" class="current_page">PORTFOLIO</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html">Webudvikling</a>
+                        <a href="portfolio.html">UX/UI</a>
+                        <a href="portfolio.html">Animation</a>
+                        <a href="portfolio.html">Grundlæggende Indhold</a>
+                    </div>
+                </div>
+                <a href="about.html">OM MIG</a>
             </div>
             <div class="menu_ikoner">
                 <label class="switch">
@@ -34,9 +41,41 @@
             </div>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <div class="knapper_forside">
+            <a href="portfolio.html" class="knap_forside">Grundlæggende web</a>
+            <a href="portfolio.html" class="knap_forside">UX/UI</a>
+            <a href="portfolio.html" class="knap_forside">Animation</a>
+            <a href="portfolio.html" class="knap_forside">Generelt indhold</a>
+        </div>
+    </main>
+    <footer>
+        <div id="flex_footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div>
+                <h3>Genveje</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div class="footer_logo">
+                <img src="imgs/logo_menu.svg" alt="logo">
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <script src="billeder.js"></script>
 </body>
 
 </html>

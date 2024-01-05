@@ -19,6 +19,7 @@ window.addEventListener("load", sidenVises);
 
 function sidenVises() {
   console.log("sidenVises");
+
   //få elementerne til at flyve og giv en "random" position og delay
   b1.classList.add("flyv_b1");
   b2.classList.add("flyv_b2");
@@ -31,6 +32,8 @@ function sidenVises() {
   b9.classList.add("flyv_b9");
   b10.classList.add("flyv_b10");
   b11.classList.add("flyv_b11");
+
+  //document.querySelector(".hero").classList.add("fade_in");
   //lav en klik funktion til gode elementer
   //goodApple1.addEventListener("mousedown", goodAppleHandler);
   //goodCheese1.addEventListener("mousedown", goodAppleHandler);//

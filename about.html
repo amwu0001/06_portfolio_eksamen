@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <title> Om mig</title>
     <link rel="stylesheet" href="generel.css">
 </head>
@@ -12,14 +13,20 @@
     <header>
         <nav>
             <div>
-                <a href="index.html" class="logo"><img src="imgs/logo_menu.svg" alt="logo"></a>
+                <a href="index.html" class="logo"><img src="imgs/logo_test.svg" alt="logo"></a>
             </div>
-            <div>
-                <ul>
-                    <li><a href="index.html">HJEM</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="about.html" class="current_page">OM MIG</a></li>
-                </ul>
+            <div class="navbar">
+                <a href="index.html">HJEM</a>
+                <div class="dropdown">
+                    <a href="portfolio.html" class="dropbtn">PORTFOLIO</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html">Webudvikling</a>
+                        <a href="portfolio.html">UX/UI</a>
+                        <a href="portfolio.html">Animation</a>
+                        <a href="portfolio.html">Grundlæggende Indhold</a>
+                    </div>
+                </div>
+                <a href="about.html" class="current_page">OM MIG</a>
             </div>
             <div class="menu_ikoner">
                 <label class="switch">
@@ -37,6 +44,7 @@
     <main></main>
     <footer></footer>
     <script src="script.js"></script>
+    <script src="billeder.js"></script>
 </body>
 
 </html>
