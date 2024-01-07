@@ -1,0 +1,79 @@
+/************** Portfolio grid (anvendt på alle undersider) **************/
+
+#portfolio_grid {
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: 80px auto;
+  gap: 10px;
+  min-height: 700px;
+}
+#overskrift {
+  border-right: 0.5px solid rgba(240, 240, 238, 0.5);
+}
+/************** Tekster **************/
+h1 {
+  font-family: minFont;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: rgba(240, 240, 238, 0.5);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding-top: 20%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+/************** Portfolio grid tabs **************/
+.portfolio_tabs_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 2%;
+  gap: 2%;
+  padding-bottom: 2%;
+}
+.portfolio_tabs {
+  padding: 10px 60px;
+  border: 0.5px solid rgba(240, 240, 238, 0.5);
+  border-radius: 60px;
+  background-color: #191919;
+}
+.portfolio_tabs p {
+  color: #f0f0ee;
+  text-decoration: none;
+  font-family: minFont;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.knap_forside:hover {
+  box-shadow: 0 0px black;
+  transform: translateY(1px);
+  background-color: #1e1e1e;
+  color: #f0f0ee80;
+  border: 0.5px solid rgba(240, 240, 238, 0.5);
+}
+.portfolio_knap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/************** Grundlæggende indhold **************/
+#portfolio_grid_ny {
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 10px;
+  min-height: 700px;
+}
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: rgba(240, 240, 238, 0.5);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding-top: 20%;
+  padding-bottom: 2%;
+  text-align: center;
+}

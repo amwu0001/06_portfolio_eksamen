@@ -1,0 +1,293 @@
+/************** Forside svævende billeder **************/
+
+#bf_screen {
+  width: 100%;
+  aspect-ratio: 16/7;
+  position: relative;
+  overflow: hidden;
+}
+#bf_baggrund {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#bf_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#bf_elements p {
+  color: #f0f0ee;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+/* billeder */
+#b1_container {
+  width: 30%;
+  aspect-ratio: 16/9;
+  position: absolute;
+  top: 50%;
+  left: -30%;
+}
+#b1_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/b1.webp);
+}
+#b2_container {
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1194/972;
+  position: absolute;
+  top: 2%;
+  left: -30%;
+}
+#b2_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.01.1.webp);
+}
+#b3_container {
+  width: 18%;
+  height: auto;
+  aspect-ratio: 598/690;
+  position: absolute;
+  top: 30%;
+  left: -25%;
+}
+#b3_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/04.04.01_2.webp);
+}
+#b4_container {
+  width: 23%;
+  height: auto;
+  aspect-ratio: 1068/1470;
+  position: absolute;
+  top: 10%;
+  left: -35%;
+}
+#b4_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.01.01_2.webp);
+}
+#b5_container {
+  width: 23%;
+  height: auto;
+  aspect-ratio: 1920/1280;
+  position: absolute;
+  top: 62%;
+  left: -25%;
+}
+#b5_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.01.01_1.webp);
+}
+#b6_container {
+  width: 23%;
+  height: auto;
+  aspect-ratio: 1920/1280;
+  position: absolute;
+  top: 38%;
+  left: -25%;
+}
+#b6_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/04.04.01_1.webp);
+}
+#b7_container {
+  width: 23%;
+  height: auto;
+  aspect-ratio: 2880/1626;
+  position: absolute;
+  top: 8%;
+  left: -25%;
+}
+#b7_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.02.webp);
+}
+#b8_container {
+  width: 15%;
+  height: auto;
+  aspect-ratio: 902/1442;
+  position: absolute;
+  top: 3%;
+  left: -15%;
+}
+#b8_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.02_2.webp);
+}
+#b9_container {
+  width: 20%;
+  height: auto;
+  aspect-ratio: 960/1432;
+  position: absolute;
+  top: 10%;
+  left: -20%;
+}
+#b9_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01.webp);
+}
+#b10_container {
+  width: 40%;
+  height: auto;
+  aspect-ratio: 1499/697;
+  position: absolute;
+  top: 45%;
+  left: -50%;
+}
+#b10_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01_1.webp);
+}
+#b11_container {
+  width: 35%;
+  height: auto;
+  aspect-ratio: 2880/1618;
+  position: absolute;
+  top: 42%;
+  left: -35%;
+}
+#b11_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01_2.webp);
+}
+
+.flyv_b1 {
+  animation-name: flyv_kf;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 16.3s;
+}
+.flyv_b2 {
+  animation-name: flyv_kf;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+.flyv_b3 {
+  animation-name: flyv3_kf;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 13.3s;
+}
+.flyv_b4 {
+  animation-name: flyv3_kf;
+  animation-duration: 21.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 7s;
+}
+.flyv_b5 {
+  animation-name: flyv3_kf;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 7s;
+}
+.flyv_b6 {
+  animation-name: flyv3_kf;
+  animation-duration: 24.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 33s;
+}
+.flyv_b7 {
+  animation-name: flyv2_kf;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 18.5s;
+}
+.flyv_b8 {
+  animation-name: flyv3_kf;
+  animation-duration: 17s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 37s;
+}
+.flyv_b9 {
+  animation-name: flyv2_kf;
+  animation-duration: 19s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 26.6s;
+}
+.flyv_b10 {
+  animation-name: flyv2_kf;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 24s;
+}
+.flyv_b11 {
+  animation-name: flyv2_kf;
+  animation-duration: 33s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 40s;
+}
+@keyframes flyv_kf {
+  100% {
+    translate: 500%;
+  }
+}
+@keyframes flyv2_kf {
+  100% {
+    translate: 600%;
+  }
+}
+@keyframes flyv3_kf {
+  100% {
+    translate: 800%;
+  }
+}
+.delay {
+  animation-delay: 31s;
+}
+/************** Delay **************/
+.fade_in {
+  animation-name: kf_fade_in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes kf_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

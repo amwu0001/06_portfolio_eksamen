@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>05.01.01</title>
+    <link rel="stylesheet" href="generel.css">
+    <link rel="stylesheet" href="undersider.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="index.html" class="logo"><img src="imgs/logo_test.svg" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <a href="index.html">HJEM</a>
+                <div class="dropdown">
+                    <a href="portfolio.html" class="current_page">PORTFOLIO</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html">Grundlæggende Web</a>
+                        <a href="portfolio.html">UX/UI</a>
+                        <a href="portfolio.html">Animation</a>
+                        <a href="portfolio.html" class="current_page">Grundlæggende Indhold</a>
+                    </div>
+                </div>
+                <a href="about.html">OM MIG</a>
+            </div>
+            <div class="menu_ikoner">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <div class="burger" onclick="myFunction(this)">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="portfolio_grid_ny">
+            <div id="overskrift">
+                <h2>Grundlæggende indhold</h2>
+            </div>
+        </div>
+        <hr class="footer_linje1">
+        <hr class="footer_linje2">
+        <hr class="footer_linje3">
+    </main>
+    <footer>
+        <div id="flex_footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div>
+                <h3>Genveje</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
