@@ -73,11 +73,11 @@ h1 {
   grid-template-columns: 1fr 1.5fr;
   gap: 10px;
 }
-.grid_2 {
+.grid_1_1_2 {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 10px;
-  grid-column: 2;
+  margin-bottom: 5%;
 }
 /* tekst */
 h2 {
@@ -114,21 +114,26 @@ p {
   text-align: center;
   margin: auto;
 }
+.vs_tekst_2 {
+  padding-right: 30px;
+  grid-column: 2;
+  text-align: center;
+}
 
-/* billeder og video*/
+/* billeder og video videosite*/
 
-.videosite_background {
+#videosite_background {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 #vs_b2_container {
-  width: 18%;
+  width: 30%;
   aspect-ratio: 448/719;
   position: absolute;
   top: 17%;
-  left: 80%;
+  left: 66%;
 }
 #vs_b2_sprite {
   width: 100%;
@@ -137,11 +142,11 @@ p {
   background-image: url(imgs/videosite/videosite-1.webp);
 }
 #vs_b1_container {
-  width: 27%;
+  width: 50%;
   aspect-ratio: 502/301;
   position: absolute;
-  top: 13%;
-  left: 55%;
+  top: 8%;
+  left: 18%;
 }
 #vs_b1_sprite {
   width: 100%;
@@ -152,10 +157,10 @@ p {
 .vs_video {
   border: none;
   position: absolute;
-  top: 65%;
-  left: 45%;
+  top: 60%;
+  left: 5%;
   aspect-ratio: 560/315;
-  width: 34%;
+  width: 55%;
 }
 .vs_waves {
   margin-top: 5%;
@@ -164,7 +169,65 @@ p {
   left: -1%;
   position: relative;
 }
-
+/* billeder og video videosite*/
+#virksomhedssite_background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#virk_b1_container {
+  width: 25%;
+  aspect-ratio: 960/1432;
+  position: absolute;
+  top: 17%;
+  left: 68%;
+}
+#virk_b1_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01.webp);
+}
+#virk_b2_container {
+  width: 47%;
+  aspect-ratio: 1499/697;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+#virk_b2_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01_1.webp);
+}
+#virk_b3_container {
+  width: 40%;
+  aspect-ratio: 2880/1618;
+  position: absolute;
+  top: 70%;
+  left: 45%;
+}
+#virk_b3_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/05.02.01_2.webp);
+}
+#virk_b4_container {
+  width: 56%;
+  aspect-ratio: 1434/809;
+  position: absolute;
+  top: 2%;
+  left: 8%;
+}
+#virk_b4_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/virks_1.webp);
+}
 /* knap */
 
 .vs_knap {

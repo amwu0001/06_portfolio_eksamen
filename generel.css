@@ -256,6 +256,7 @@ input:checked + .slider:before {
 /************** Footer **************/
 footer {
   background-color: #f0f0ee;
+  min-height: 300px;
 }
 #flex_footer {
   display: flex;
