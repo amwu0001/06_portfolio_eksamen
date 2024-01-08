@@ -242,14 +242,14 @@ p {
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 100%;
+  height: 150%;
 }
 #web_b2_container {
-  width: 46%;
+  width: 55%;
   aspect-ratio: 1243/682;
   position: absolute;
-  top: 8%;
-  left: 50%;
+  top: 4%;
+  left: 43%;
 }
 #web_b2_sprite {
   width: 100%;
@@ -258,11 +258,11 @@ p {
   background-image: url(imgs/web/web._1webp.webp);
 }
 #web_b1_container {
-  width: 37%;
+  width: 46%;
   aspect-ratio: 1243/682;
   position: absolute;
-  top: 60%;
-  left: 40%;
+  top: 41%;
+  left: 38%;
 }
 #web_b1_sprite {
   width: 100%;
@@ -271,15 +271,181 @@ p {
   background-image: url(imgs/web/web_2.webp);
 }
 #web_b3_container {
-  width: 26%;
+  width: 30%;
   aspect-ratio: 569/719;
   position: absolute;
-  top: 10%;
-  left: 12%;
+  top: 18%;
+  left: 5%;
 }
 #web_b3_sprite {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-image: url(imgs/web/web_3.webp);
+}
+
+/************** UX/UI **************/
+
+/* Billeder præsentation */
+
+.ux_space {
+  padding-bottom: 30%;
+}
+#ux_p_background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+#ux_p_b1_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+}
+#ux_p_b1_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_1.webp);
+}
+#ux_p_b2_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+}
+#ux_p_b2_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_2.webp);
+}
+#ux_p_b4_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 28%;
+  left: 10%;
+}
+#ux_p_b4_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_3.webp);
+}
+#ux_p_b5_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+}
+#ux_p_b5_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_5.webp);
+}
+#ux_p_b6_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 53%;
+  left: 10%;
+}
+#ux_p_b6_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_6.webp);
+}
+#ux_p_b7_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+}
+#ux_p_b7_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_7.webp);
+}
+#ux_p_b8_container {
+  width: 45%;
+  aspect-ratio: 1600/900;
+  position: absolute;
+  top: 78%;
+  left: 10%;
+}
+#ux_p_b8_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/presentation/p_last.webp);
+}
+
+/* Billeder procesdokumentation */
+
+#ux_d_background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+#ux_d_b1_container {
+  width: 45%;
+  aspect-ratio: 1194/972;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+}
+#ux_d_b1_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.01.1.webp);
+}
+#ux_d_b2_container {
+  width: 45%;
+  aspect-ratio: 2880/1626;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+}
+#ux_d_b2_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.02.webp);
+}
+#ux_d_b3_container {
+  width: 25%;
+  aspect-ratio: 902/1442;
+  position: absolute;
+  top: 12%;
+  left: 60%;
+}
+#ux_d_b3_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/03.04.02_2.webp);
+}
+#ux_d_b4_container {
+  width: 45%;
+  aspect-ratio: 1509/900;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+}
+#ux_d_b4_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/ux:ui/dokumentation.webp);
 }
