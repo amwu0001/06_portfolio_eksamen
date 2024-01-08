@@ -34,7 +34,68 @@ body {
   background-color: #1e1e1e;
   overflow-x: hidden;
 }
-
+footer {
+  margin-top: auto;
+}
+.forside_sektion1 {
+  margin-top: 100px;
+}
+/************** tekster **************/
+h5 {
+  font-family: minFont;
+  font-size: 1rem;
+  color: #1e1e1e;
+  text-align: left;
+  font-weight: 600;
+}
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: rgba(240, 240, 238, 0.5);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: fixed;
+  height: 100%;
+  top: 10%;
+}
+h4 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #f0f0ee;
+  text-align: left;
+}
+p {
+  font-family: minFont;
+  font-size: 0.8rem;
+  color: #f0f0ee;
+  text-align: left;
+  max-width: 65ch;
+  margin-top: 15px;
+  line-height: 1.5rem;
+}
+footer p {
+  font-family: minFont;
+  font-size: 0.8rem;
+  color: #1e1e1e;
+  text-align: left;
+  max-width: 65ch;
+  margin-top: 0;
+  line-height: 1.5rem;
+}
+footer a {
+  font-family: minFont;
+  font-size: 0.8rem;
+  color: #1e1e1e;
+  text-align: left;
+  max-width: 65ch;
+  margin-top: 0;
+  line-height: 1.5rem;
+  text-decoration: underline;
+  list-style: none;
+}
 /************** menu **************/
 header {
   background-color: #1e1e1e;
@@ -123,7 +184,7 @@ header nav .navbar {
 }
 /* skift farve på links ved hover */
 .dropdown:hover .dropdown-content a:hover {
-  color: #f0f0ee80;
+  color: rgba(240, 240, 238, 0.5);
 }
 /*placér logo foran dropdown menu*/
 .logo {
@@ -260,8 +321,8 @@ footer {
 }
 #flex_footer {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 40px;
   padding: 2%;
   align-items: flex-start;
 }
