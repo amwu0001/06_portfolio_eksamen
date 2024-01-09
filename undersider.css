@@ -56,7 +56,6 @@ h1 {
   justify-content: center;
   margin-top: 20px;
 }
-/************** Grundlæggende indhold **************/
 
 /* layout */
 .portfolio_grid_ny {
@@ -83,7 +82,8 @@ h1 {
   margin: auto;
 }
 .vs_tekst_2 {
-  padding-right: 30px;
+  padding-top: 7%;
+  padding-right: 100px;
   grid-column: 2;
   text-align: center;
 }
@@ -118,6 +118,8 @@ h1 {
     margin: auto;
   }
 }
+/************** Grundlæggende indhold **************/
+
 /* billeder og video videosite*/
 #videosite_background {
   width: 100%;
@@ -519,4 +521,123 @@ h1 {
   height: 100%;
   background-size: cover;
   background-image: url(imgs/animation_3.webp);
+}
+/************** Om mig **************/
+.om_mig_topspace {
+  min-height: 70px;
+}
+#portrait_background {
+  width: 100%;
+  height: 150%;
+  position: relative;
+  overflow: hidden;
+}
+#portrait_container {
+  width: 40%;
+  position: absolute;
+  aspect-ratio: 1200/1200;
+  top: 47%;
+  left: 47%;
+}
+#portrait_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/portroet.webp);
+}
+#portrait_container_2 {
+  width: 35%;
+  position: absolute;
+  aspect-ratio: 801/1202;
+  top: 6%;
+  left: 8%;
+}
+#portrait_sprite_2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/portrot_lang.webp);
+}
+/*cv billeder*/
+#cv_background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#cv_container_1 {
+  width: 44%;
+  position: absolute;
+  aspect-ratio: 1364/801;
+  top: 23%;
+  left: 53%;
+}
+#cv_sprite_1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/cv_1.webp);
+}
+#cv_container_2 {
+  width: 40%;
+  position: absolute;
+  aspect-ratio: 792/792;
+  top: 4%;
+  left: 7%;
+}
+#cv_sprite_2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/cv_2.webp);
+}
+#cv_container_3 {
+  width: 27%;
+  position: absolute;
+  aspect-ratio: 791/793;
+  top: 64%;
+  left: 28%;
+}
+#cv_sprite_3 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/cv_3.webp);
+}
+.grid_om_mig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 5%;
+  grid-column: 2;
+  grid-row: 1;
+}
+.profil {
+  z-index: 1;
+}
+.om_mig_tekst {
+  padding-top: 7%;
+  margin-right: 2px;
+  grid-column: 2;
+}
+#linje_about {
+  margin-top: 120px;
+}
+#om_os_grid2 {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 10px;
+}
+.portfolio_grid_ny_2 {
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 10px;
+}
+.titel_gap {
+  margin-top: 50px;
+}
+#om_os_grid .vs_tekst p {
+  margin-top: 0;
 }

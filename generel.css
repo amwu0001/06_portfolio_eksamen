@@ -65,6 +65,15 @@ h5 {
   text-align: left;
   font-weight: 600;
 }
+h6 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  color: #f0f0ee;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 15px;
+  line-height: 1.5rem;
+}
 p {
   font-family: minFont;
   font-size: 0.8rem;
@@ -289,7 +298,7 @@ input:checked + .slider:before {
 @media (max-width: 1000px) {
   .knapper_forside {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     text-align: center;
@@ -299,7 +308,7 @@ input:checked + .slider:before {
     padding-top: 15px;
   }
   .knap_forside {
-    padding: 10px 30px;
+    padding: 10px 10%;
     border: 0.5px solid rgba(240, 240, 238, 0.5);
     border-radius: 60px;
     background-color: #191919;
