@@ -12,8 +12,6 @@ video {
 }
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 footer {
   margin-top: auto;
@@ -41,13 +39,6 @@ footer {
   margin-top: 100px;
 }
 /************** tekster **************/
-h5 {
-  font-family: minFont;
-  font-size: 1rem;
-  color: #1e1e1e;
-  text-align: left;
-  font-weight: 600;
-}
 h2 {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
@@ -66,6 +57,13 @@ h4 {
   text-transform: uppercase;
   color: #f0f0ee;
   text-align: left;
+}
+h5 {
+  font-family: minFont;
+  font-size: 1rem;
+  color: #1e1e1e;
+  text-align: left;
+  font-weight: 600;
 }
 p {
   font-family: minFont;
@@ -96,6 +94,18 @@ footer a {
   text-decoration: underline;
   list-style: none;
 }
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 1.5rem;
+    top: 7%;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+}
 /************** menu **************/
 header {
   background-color: #1e1e1e;
@@ -106,11 +116,8 @@ header {
   z-index: 2;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
-.logo img {
-  display: flex;
-}
 a img {
-  width: 40px;
+  width: 35px;
   height: auto;
 }
 header a {
@@ -124,8 +131,8 @@ header a {
   opacity: 50%;
 }
 .logo img {
-  max-width: 60px;
   display: flex;
+  padding-bottom: 5px;
 }
 nav {
   display: flex;
@@ -192,41 +199,6 @@ header nav .navbar {
   z-index: 3;
 }
 
-/************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
-
-/* Design og positionering */
-.burger {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.line1,
-.line2,
-.line3 {
-  width: 40px;
-  height: 1px;
-  background-color: #f0f0ee;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Roter første linje */
-.change .line1 {
-  transform: translate(0, 4px) rotate(-25deg);
-}
-
-/* Fjern anden linje */
-.change .line2 {
-  opacity: 0;
-}
-
-/* Roter tredje linje */
-.change .line3 {
-  transform: translate(0, -10px) rotate(25deg);
-}
-.burger {
-  display: none;
-}
 /************** toggle light/dark (har taget udgangspunkt i eksempel fra w3schools.com) **************/
 
 .switch {
@@ -314,6 +286,30 @@ input:checked + .slider:before {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+@media (max-width: 1000px) {
+  .knapper_forside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    row-gap: 40px;
+    margin: auto;
+    padding-bottom: 25px;
+    padding-top: 15px;
+  }
+  .knap_forside {
+    padding: 10px 30px;
+    border: 0.5px solid rgba(240, 240, 238, 0.5);
+    border-radius: 60px;
+    background-color: #191919;
+    color: #f0f0ee;
+    text-decoration: none;
+    font-family: minFont;
+    font-size: 0.9rem;
+    box-shadow: 0 4px black;
+  }
+}
 /************** Footer **************/
 footer {
   background-color: #f0f0ee;
@@ -326,13 +322,13 @@ footer {
   padding: 2%;
   align-items: flex-start;
 }
+/* Tre linjer (står i main i html) */
 .footer_linje1 {
   height: 1px;
   margin-bottom: 5px;
   background-color: #f0f0ee;
   border: #f0f0ee;
 }
-/* Tre linjer (står i main i html) */
 .footer_linje2 {
   height: 3px;
   margin-bottom: 7.5px;
@@ -345,18 +341,16 @@ footer {
   background-color: #f0f0ee;
   border: #f0f0ee;
 }
-.footer_logo {
-  display: flex;
-  width: 150px;
-  height: auto;
-}
-
 .hero img {
   width: 400px;
   height: auto;
   margin: 40px auto;
 }
-
+@media (max-width: 1000px) {
+  #flex_footer {
+    gap: 10px;
+  }
+}
 /************** Horizontal og vertikal linje **************/
 
 .linje {
@@ -367,7 +361,7 @@ footer {
   margin-bottom: 30px;
 }
 
-.vertikal_linje {
+/*.vertikal_linje {
   border: 0.5px solid rgba(240, 240, 238, 0.5);
   border-bottom: none;
   display: block;
@@ -376,8 +370,9 @@ footer {
   rotate: 90deg;
   position: relative;
   left: -45%;
-}
-@media (max-width: 800px) {
+}*/
+
+@media (max-width: 1000px) {
   .hide {
     display: none;
   }
@@ -412,7 +407,6 @@ footer {
   .menu_ikoner {
     display: flex;
     align-items: center;
-    gap: 40px;
   }
   .hide header nav .navbar {
     display: block;
@@ -422,7 +416,7 @@ footer {
   }
   /************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
 
-  /* Design og positionering */
+  /* Design og positionering
   .burger {
     display: inline-block;
     cursor: pointer;
@@ -439,18 +433,18 @@ footer {
     transition: 0.4s;
   }
 
-  /* Roter første linje */
+  Roter første linje
   .change .line1 {
     transform: translate(0, 4px) rotate(-25deg);
   }
 
-  /* Fjern anden linje */
+  /* Fjern anden linje
   .change .line2 {
     opacity: 0;
   }
 
-  /* Roter tredje linje */
+  /* Roter tredje linje
   .change .line3 {
     transform: translate(0, -10px) rotate(25deg);
-  }
+  }*/
 }

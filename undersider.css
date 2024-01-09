@@ -1,5 +1,4 @@
-/************** Portfolio grid (anvendt på alle undersider) **************/
-
+/************** Portfolio grid **************/
 #portfolio_grid {
   margin-top: 4%;
   display: grid;
@@ -7,9 +6,6 @@
   grid-row: auto;
   gap: 10px;
   min-height: 700px;
-}
-#portfolio_grid {
-  border-right: 0.5px solid rgba(240, 240, 238, 0.5);
 }
 /************** Tekster **************/
 h1 {
@@ -24,6 +20,7 @@ h1 {
   padding-bottom: 2%;
   text-align: center;
 }
+
 /************** Portfolio grid tabs **************/
 .portfolio_tabs_grid {
   display: grid;
@@ -90,9 +87,38 @@ h1 {
   grid-column: 2;
   text-align: center;
 }
-
+@media (max-width: 1000px) {
+  .portfolio_grid_ny {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 5px;
+  }
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .grid_1_1_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-left: 52px;
+  }
+  .vs_tekst_2 {
+    padding-right: 10px;
+    grid-column: 1;
+    text-align: center;
+  }
+  .vs_tekst {
+    padding-top: 10%;
+    padding-left: 30px;
+    text-align: center;
+    margin: auto;
+  }
+}
 /* billeder og video videosite*/
-
 #videosite_background {
   width: 100%;
   height: 100%;
@@ -204,10 +230,7 @@ h1 {
 .vs_knap {
   margin-top: 60px;
 }
-/* Galleri */
-.galleri {
-  grid-column: 2;
-}
+
 /************** Grundlæggende web **************/
 #web_background {
   width: 100%;
@@ -261,6 +284,11 @@ h1 {
 
 .ux_space {
   padding-bottom: 30%;
+}
+@media (max-width: 1000px) {
+  .ux_space {
+    display: none;
+  }
 }
 #ux_p_background {
   width: 100%;
@@ -419,4 +447,76 @@ h1 {
   height: 100%;
   background-size: cover;
   background-image: url(imgs/ux:ui/dokumentation.webp);
+}
+/************** Animation **************/
+#animation_background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#animation_b1_container {
+  width: 50%;
+  aspect-ratio: 2880/1800;
+  position: absolute;
+  top: 4%;
+  left: 15%;
+}
+#animation_b1_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/04.04.01_1.webp);
+}
+#animation_b2_container {
+  width: 20%;
+  aspect-ratio: 598/690;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+}
+#animation_b2_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/forside/04.04.01_2.webp);
+}
+#animation_b3_container {
+  width: 40%;
+  aspect-ratio: 1600/902;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+#animation_b3_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/animation_1.webp);
+}
+#animation_b4_container {
+  width: 44%;
+  aspect-ratio: 1606/901;
+  position: absolute;
+  top: 70%;
+  left: 47%;
+}
+#animation_b4_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/animation_2.webp);
+}
+#animation_b5_container {
+  width: 30%;
+  aspect-ratio: 974/648;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+}
+#animation_b5_sprite {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(imgs/animation_3.webp);
 }
