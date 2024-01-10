@@ -22,8 +22,3 @@ function sidenVises() {
 
   document.querySelector("main").classList.add("fade_in");
 }
-function myFunction() {
-  console.log("darkMode");
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
