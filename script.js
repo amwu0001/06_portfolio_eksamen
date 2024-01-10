@@ -1,32 +1,29 @@
-function myFunction(x) {
-  console.log("myfunc");
-  x.classList.toggle("change");
-}
-
 const burger = document.querySelector(".burger");
 const nav = document.querySelector("nav");
-const menu = document.querySelector(".navbar");
-const links = document.querySelectorAll(".navbar li a");
+const menu = document.querySelector("#navbar");
+const menu1 = document.querySelectorAll("#navbar a");
+const menu2 = document.querySelectorAll(".navbar a");
 
 burger.addEventListener("click", () => {
   console.log("1");
-  burger.classList.toggle("active");
-  nav.classList.toggle("active");
-  document.querySelector("main").classList.toggle("hide");
+  burger.classList.toggle("change");
+  nav.classList.toggle("hide");
+  menu.classList.toggle("hide");
+  menu1.classList.toggle("hide");
+  menu2.classList.toggle("hide");
 });
 
-links.forEach((link) => {
-  console.log("2");
-  link.addEventListener("click", () => {
-    burger.classList.remove("active");
-  });
+/* fade in */
 
-  /* fade in */
-});
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
   console.log("sidenVises");
 
   document.querySelector("main").classList.add("fade_in");
+}
+function myFunction() {
+  console.log("darkMode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }

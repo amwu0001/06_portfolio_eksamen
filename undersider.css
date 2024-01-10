@@ -1,63 +1,4 @@
-/************** Portfolio grid **************/
-#portfolio_grid {
-  margin-top: 4%;
-  display: grid;
-  grid-template-columns: 80px auto;
-  grid-row: auto;
-  gap: 10px;
-  min-height: 700px;
-}
-/************** Tekster **************/
-h1 {
-  font-family: minFont;
-  font-size: 1.8rem;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: rgba(240, 240, 238, 0.5);
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  padding-top: 20%;
-  padding-bottom: 2%;
-  text-align: center;
-}
-
-/************** Portfolio grid tabs **************/
-.portfolio_tabs_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  padding-top: 2%;
-  gap: 2%;
-  padding-bottom: 2%;
-  grid-column: 2;
-}
-.portfolio_tabs {
-  padding: 10px 60px;
-  border: 0.5px solid rgba(240, 240, 238, 0.5);
-  border-radius: 60px;
-  background-color: #191919;
-}
-.portfolio_tabs p {
-  color: #f0f0ee;
-  text-decoration: none;
-  font-family: minFont;
-  font-size: 0.9rem;
-  text-align: center;
-}
-.knap_forside:hover {
-  box-shadow: 0 0px black;
-  transform: translateY(1px);
-  background-color: #1e1e1e;
-  color: #f0f0ee80;
-  border: 0.5px solid rgba(240, 240, 238, 0.5);
-}
-.portfolio_knap {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* layout */
+/**************** Layout portfolio sider ****************/
 .portfolio_grid_ny {
   padding-top: 5%;
   display: grid;
@@ -87,6 +28,13 @@ h1 {
   grid-column: 2;
   text-align: center;
 }
+.vs_waves {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 102%;
+  left: -1%;
+  position: relative;
+}
 @media (max-width: 1000px) {
   .portfolio_grid_ny {
     padding-top: 5%;
@@ -97,12 +45,14 @@ h1 {
   .grid_1_1 {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     padding-right: 10px;
   }
   .grid_1_1_2 {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     padding-left: 52px;
   }
@@ -117,7 +67,16 @@ h1 {
     text-align: center;
     margin: auto;
   }
+  .vs_knap {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .vs_waves {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
 }
+
 /************** Grundlæggende indhold **************/
 
 /* billeder og video videosite*/
@@ -126,6 +85,7 @@ h1 {
   height: 100%;
   position: relative;
   overflow: hidden;
+  grid-row: 2;
 }
 #vs_b2_container {
   width: 30%;
@@ -161,14 +121,9 @@ h1 {
   aspect-ratio: 560/315;
   width: 55%;
 }
-.vs_waves {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 102%;
-  left: -1%;
-  position: relative;
-}
+
 /* billeder og video virksomhedssite*/
+
 #virksomhedssite_background {
   width: 100%;
   height: 100%;
@@ -232,20 +187,57 @@ h1 {
 .vs_knap {
   margin-top: 60px;
 }
-
+@media (max-width: 1000px) {
+  #vs_b1_container {
+    width: 70%;
+  }
+  #vs_b2_container {
+    width: 40%;
+    top: 37%;
+    left: 49%;
+  }
+  .vs_video {
+    border: none;
+    position: absolute;
+    top: 69%;
+    left: 5%;
+    width: 75%;
+  }
+  #virk_b1_container {
+    width: 50%;
+    top: 10%;
+    left: 8%;
+  }
+  #virk_b2_container {
+    width: 70%;
+    top: 37%;
+    left: 18%;
+  }
+  #virk_b3_container {
+    width: 70%;
+    top: 76%;
+    left: 15%;
+  }
+  #virk_b4_container {
+    width: 56%;
+    top: 58%;
+    left: 8%;
+  }
+}
 /************** Grundlæggende web **************/
 #web_background {
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 150%;
+  height: 100%;
+  grid-row: 2;
 }
 #web_b2_container {
-  width: 55%;
+  width: 70%;
   aspect-ratio: 1243/682;
   position: absolute;
-  top: 4%;
-  left: 43%;
+  top: 63%;
+  left: 15%;
 }
 #web_b2_sprite {
   width: 100%;
@@ -254,11 +246,11 @@ h1 {
   background-image: url(imgs/web/web._1webp.webp);
 }
 #web_b1_container {
-  width: 46%;
+  width: 64%;
   aspect-ratio: 1243/682;
   position: absolute;
-  top: 41%;
-  left: 38%;
+  top: 33%;
+  left: 30%;
 }
 #web_b1_sprite {
   width: 100%;
@@ -267,10 +259,10 @@ h1 {
   background-image: url(imgs/web/web_2.webp);
 }
 #web_b3_container {
-  width: 30%;
+  width: 45%;
   aspect-ratio: 569/719;
   position: absolute;
-  top: 18%;
+  top: 1%;
   left: 5%;
 }
 #web_b3_sprite {
@@ -280,23 +272,34 @@ h1 {
   background-image: url(imgs/web/web_3.webp);
 }
 
+@media (min-width: 1000px) {
+  /* billeder */
+  #web_b2_container {
+    width: 55%;
+    top: 4%;
+    left: 43%;
+  }
+  #web_b1_container {
+    width: 46%;
+    top: 41%;
+    left: 38%;
+  }
+  #web_b3_container {
+    width: 30%;
+    top: 18%;
+    left: 5%;
+  }
+}
+
 /************** UX/UI **************/
 
 /* Billeder præsentation */
-
-.ux_space {
-  padding-bottom: 30%;
-}
-@media (max-width: 1000px) {
-  .ux_space {
-    display: none;
-  }
-}
 #ux_p_background {
   width: 100%;
   position: relative;
   overflow: hidden;
   height: 100%;
+  grid-row: 2;
 }
 #ux_p_b1_container {
   width: 45%;
@@ -397,9 +400,16 @@ h1 {
   position: relative;
   overflow: hidden;
   height: 100%;
+  grid-row: 2;
+}
+#ux_d_background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 #ux_d_b1_container {
-  width: 45%;
+  width: 80%;
   aspect-ratio: 1194/972;
   position: absolute;
   top: 2%;
@@ -412,11 +422,11 @@ h1 {
   background-image: url(imgs/forside/03.04.01.1.webp);
 }
 #ux_d_b2_container {
-  width: 45%;
+  width: 65%;
   aspect-ratio: 2880/1626;
   position: absolute;
-  top: 62%;
-  left: 50%;
+  top: 30%;
+  left: 2%;
 }
 #ux_d_b2_sprite {
   width: 100%;
@@ -425,10 +435,10 @@ h1 {
   background-image: url(imgs/forside/03.04.02.webp);
 }
 #ux_d_b3_container {
-  width: 25%;
+  width: 35%;
   aspect-ratio: 902/1442;
   position: absolute;
-  top: 12%;
+  top: 52%;
   left: 60%;
 }
 #ux_d_b3_sprite {
@@ -438,10 +448,10 @@ h1 {
   background-image: url(imgs/forside/03.04.02_2.webp);
 }
 #ux_d_b4_container {
-  width: 45%;
+  width: 65%;
   aspect-ratio: 1509/900;
   position: absolute;
-  top: 70%;
+  top: 67%;
   left: 10%;
 }
 #ux_d_b4_sprite {
@@ -450,12 +460,63 @@ h1 {
   background-size: cover;
   background-image: url(imgs/ux:ui/dokumentation.webp);
 }
+@media (max-width: 1000px) {
+  .ux_space {
+    display: none;
+  }
+  .dokumentation_tekst {
+    grid-row: 1;
+  }
+}
+@media (min-width: 1000px) {
+  .ux_space {
+    padding-bottom: 30%;
+  }
+  #ux_p_background {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  /* Billeder procesdokumentation */
+
+  #ux_d_b1_container {
+    width: 45%;
+    aspect-ratio: 1194/972;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+  }
+  #ux_d_b2_container {
+    width: 45%;
+    aspect-ratio: 2880/1626;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+  }
+  #ux_d_b3_container {
+    width: 25%;
+    aspect-ratio: 902/1442;
+    position: absolute;
+    top: 12%;
+    left: 60%;
+  }
+  #ux_d_b4_container {
+    width: 45%;
+    aspect-ratio: 1509/900;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+  }
+}
 /************** Animation **************/
 #animation_background {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
+  grid-row: 2;
 }
 #animation_b1_container {
   width: 50%;
@@ -522,10 +583,40 @@ h1 {
   background-size: cover;
   background-image: url(imgs/animation_3.webp);
 }
+@media (max-width: 1000px) {
+  #animation_b1_container {
+    width: 70%;
+  }
+  #animation_b2_container {
+    width: 40%;
+    top: 30%;
+    left: 10%;
+  }
+  #animation_b3_container {
+    width: 60%;
+    top: 50%;
+  }
+  #animation_b4_container {
+    width: 64%;
+    aspect-ratio: 1606/901;
+    position: absolute;
+    top: 85%;
+    left: 17%;
+  }
+  #animation_b5_container {
+    width: 40%;
+    top: 70%;
+    left: 7%;
+  }
+}
 /************** Om mig **************/
+
 .om_mig_topspace {
   min-height: 70px;
 }
+
+/* Billeder om mig */
+
 #portrait_background {
   width: 100%;
   height: 150%;
@@ -558,7 +649,9 @@ h1 {
   background-size: cover;
   background-image: url(imgs/portrot_lang.webp);
 }
+
 /*cv billeder*/
+
 #cv_background {
   width: 100%;
   height: 100%;
@@ -573,8 +666,8 @@ h1 {
   left: 53%;
 }
 #cv_sprite_1 {
-  width: 100%;
-  height: 100%;
+  width: 103%;
+  height: 105%;
   background-size: cover;
   background-image: url(imgs/cv_1.webp);
 }
@@ -599,11 +692,14 @@ h1 {
   left: 28%;
 }
 #cv_sprite_3 {
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 107%;
   background-size: cover;
   background-image: url(imgs/cv_3.webp);
 }
+
+/* layout */
+
 .grid_om_mig {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -611,9 +707,6 @@ h1 {
   margin-bottom: 5%;
   grid-column: 2;
   grid-row: 1;
-}
-.profil {
-  z-index: 1;
 }
 .om_mig_tekst {
   padding-top: 7%;
@@ -638,6 +731,40 @@ h1 {
 .titel_gap {
   margin-top: 50px;
 }
-#om_os_grid .vs_tekst p {
-  margin-top: 0;
+
+@media (max-width: 1000px) {
+  .grid_om_mig {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .om_mig_tekst {
+    padding-top: 10%;
+    padding-left: 30px;
+    text-align: center;
+    margin: auto;
+  }
+  #linje_about {
+    margin-top: 20px;
+  }
+  #om_os_grid2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .portfolio_grid_ny_2 {
+    grid-template-columns: 20px auto;
+    gap: 5px;
+  }
+  #cv_container_3 {
+    width: 27%;
+    top: 4%;
+    left: 18%;
+  }
+  #cv_container_2 {
+    width: 60%;
+    top: 50%;
+    left: 7%;
+  }
+  #cv_background {
+    grid-row: 1;
+  }
 }

@@ -1,6 +1,3 @@
-function ranNum(max) {
-  return Math.floor(Math.random() * max) + 1;
-}
 const b1 = document.querySelector("#b1_container");
 const b2 = document.querySelector("#b2_container");
 const b3 = document.querySelector("#b3_container");

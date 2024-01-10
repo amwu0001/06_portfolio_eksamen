@@ -1,3 +1,9 @@
+/* Variabler */
+html {
+  --dark: #1e1e1e;
+  --light: #f0f0ee;
+  --grey: rgba(240, 240, 238, 0.5);
+}
 /************** reset **************/
 * {
   margin: 0;
@@ -10,14 +16,24 @@ video {
   height: auto;
   display: block;
 }
-body {
-  min-height: 100vh;
-}
 footer {
   margin-top: auto;
 }
 .forside_sektion1 {
   margin-top: 100px;
+}
+#navbar_mobile {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .hero_mobile {
+    display: none;
+  }
+  .hero img {
+    width: 1100px;
+    height: auto;
+    margin: 40px auto;
+  }
 }
 /************** Fonte og tekster **************/
 @font-face {
@@ -29,7 +45,7 @@ footer {
 
 /************** generel opsætning **************/
 body {
-  background-color: #1e1e1e;
+  background-color: var(--dark);
   overflow-x: hidden;
 }
 footer {
@@ -39,6 +55,17 @@ footer {
   margin-top: 100px;
 }
 /************** tekster **************/
+.gap {
+  margin-top: 15px;
+}
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: rgba(240, 240, 238, 0.5);
+  text-align: center;
+}
 h2 {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
@@ -55,38 +82,37 @@ h4 {
   font-family: "Work Sans", sans-serif;
   font-size: 1.3rem;
   text-transform: uppercase;
-  color: #f0f0ee;
+  color: var(--light);
   text-align: left;
+  margin-bottom: 15px;
 }
 h5 {
   font-family: minFont;
   font-size: 1rem;
-  color: #1e1e1e;
+  color: var(--dark);
   text-align: left;
   font-weight: 600;
 }
 h6 {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
-  color: #f0f0ee;
+  color: var(--light);
   text-align: left;
   font-weight: 600;
-  margin-top: 15px;
   line-height: 1.5rem;
 }
 p {
   font-family: minFont;
   font-size: 0.8rem;
-  color: #f0f0ee;
+  color: var(--light);
   text-align: left;
   max-width: 65ch;
-  margin-top: 15px;
   line-height: 1.5rem;
 }
 footer p {
   font-family: minFont;
   font-size: 0.8rem;
-  color: #1e1e1e;
+  color: var(--dark);
   text-align: left;
   max-width: 65ch;
   margin-top: 0;
@@ -95,7 +121,7 @@ footer p {
 footer a {
   font-family: minFont;
   font-size: 0.8rem;
-  color: #1e1e1e;
+  color: var(--dark);
   text-align: left;
   max-width: 65ch;
   margin-top: 0;
@@ -119,11 +145,10 @@ footer a {
 header {
   background-color: #1e1e1e;
   border-bottom: 0.5px solid rgba(240, 240, 238, 0.5);
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 2;
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 a img {
   width: 35px;
@@ -132,7 +157,6 @@ a img {
 header a {
   font-family: minFont;
   text-decoration: none;
-  color: black;
   font-size: 0.8rem;
   color: #f0f0ee;
 }
@@ -209,7 +233,7 @@ header nav .navbar {
 }
 
 /************** toggle light/dark (har taget udgangspunkt i eksempel fra w3schools.com) **************/
-
+/*
 .switch {
   position: relative;
   display: inline-block;
@@ -256,13 +280,14 @@ input:checked + .slider:before {
 }
 
 /* Rounded sliders */
+/*
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
-}
+}*/
 
 /************** Forside knapper **************/
 
@@ -297,18 +322,13 @@ input:checked + .slider:before {
 }
 @media (max-width: 1000px) {
   .knapper_forside {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
-    text-align: center;
-    row-gap: 40px;
-    margin: auto;
-    padding-bottom: 25px;
-    padding-top: 15px;
+    gap: 20px;
   }
   .knap_forside {
-    padding: 10px 10%;
+    padding: 10px 40px;
     border: 0.5px solid rgba(240, 240, 238, 0.5);
     border-radius: 60px;
     background-color: #191919;
@@ -350,11 +370,6 @@ footer {
   background-color: #f0f0ee;
   border: #f0f0ee;
 }
-.hero img {
-  width: 400px;
-  height: auto;
-  margin: 40px auto;
-}
 @media (max-width: 1000px) {
   #flex_footer {
     gap: 10px;
@@ -369,23 +384,23 @@ footer {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-/*.vertikal_linje {
-  border: 0.5px solid rgba(240, 240, 238, 0.5);
-  border-bottom: none;
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  rotate: 90deg;
-  position: relative;
-  left: -45%;
-}*/
-
 @media (max-width: 1000px) {
-  .hide {
+  .hero img {
+    width: 400px;
+    height: auto;
+    margin: 40px auto;
+  }
+  .hero_web {
+    display: none;
+  }
+  #bf_screen {
+    display: none;
+  }
+  #navbar {
     display: none;
   }
   .hide #navbar {
+    display: flex;
     height: 100%; /* 100% Full-height */
     width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
@@ -394,7 +409,6 @@ footer {
     left: 0;
     background-color: #1e1e1e; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   .hide header #navbar a {
@@ -406,26 +420,13 @@ footer {
     transition: 0.3s;
     font-family: minFont;
   }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    position: relative;
-  }
   .menu_ikoner {
     display: flex;
     align-items: center;
   }
-  .hide header nav .navbar {
-    display: block;
-    text-align: center;
-    list-style: none;
-    margin: auto;
-  }
   /************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
 
-  /* Design og positionering
+  /*Design og positionering*/
   .burger {
     display: inline-block;
     cursor: pointer;
@@ -442,18 +443,21 @@ footer {
     transition: 0.4s;
   }
 
-  Roter første linje
+  /*Roter første linje*/
   .change .line1 {
     transform: translate(0, 4px) rotate(-25deg);
   }
 
-  /* Fjern anden linje
+  /* Fjern anden linje*/
   .change .line2 {
     opacity: 0;
   }
 
-  /* Roter tredje linje
+  /* Roter tredje linje*/
   .change .line3 {
     transform: translate(0, -10px) rotate(25deg);
-  }*/
+  }
+  .switch {
+    display: none;
+  }
 }

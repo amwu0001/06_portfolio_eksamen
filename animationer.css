@@ -1,5 +1,9 @@
 /************** Forside svævende billeder **************/
+
 @media (min-width: 1000px) {
+  .space_index {
+    height: 80px;
+  }
   #bf_screen {
     width: 100%;
     aspect-ratio: 16/7;
